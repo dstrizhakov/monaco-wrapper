@@ -32,11 +32,22 @@ users.forEach(logPerson);
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
 // `;
 
+const TestExample = `import {IsTypeEqual, typeAssert} from 'type-assertions';
+import {User, logPerson, users} from './index';
+typeAssert<IsTypeEqual<User, {name: string, age: number, occupation: string}>>();
+typeAssert<IsTypeEqual<typeof users, {name: string, age: number, occupation: string}[]>>();
+typeAssert<IsTypeEqual<typeof logPerson, (user: {name: string, age: number, occupation: string}) => void>>();`;
+const TestNull = ``;
+
+
 function App() {
   return (
     <>
       <ErrorBoundary>
-        <MonacoWrapper originalCode={originalCodeExample} />
+        <MonacoWrapper
+          originalCode={originalCodeExample}
+          originalTest={TestNull}
+        />
       </ErrorBoundary>
     </>
   );

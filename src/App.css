@@ -4,3 +4,28 @@
   padding: 0;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  align-items: stretch;
+
+}
+
+.editors {
+  color: black;
+  background-color: #ffffff;
+}
+.diagnostic {
+  width: 50vw;
+  color: black;
+  background-color: #ffffff;
+}
+
+.messages {
+  text-align: left;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgb(175, 36, 1);
+  border-left: 1px solid #ccc;
+}
